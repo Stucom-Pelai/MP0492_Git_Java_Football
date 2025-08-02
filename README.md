@@ -8,7 +8,7 @@
 # Class diagram
 ```mermaid
 classDiagram
-   class Match {
+   class Game {
     -field: Field
     -date: Date
 	-ball: Ball
@@ -76,9 +76,9 @@ classDiagram
     Player <|.. Defender : extends
     Player <|.. Midfielder : extends
     Player <|.. Forward : extends  
-    Match "1" *-- "1" Field: part-of
-    Match "1" *-- "1" Ball: part-of
-    Match "1" o-- "2" Team : has-a
+    Game "1" *-- "1" Field: part-of
+    Game "1" *-- "1" Ball: part-of
+    Game "1" o-- "2" Team : has-a
     Team "1" *-- "11" Player : part-of
 
     

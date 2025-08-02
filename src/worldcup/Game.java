@@ -7,7 +7,7 @@ import java.util.Random;
 /**
  * Class to define the game
  */
-public class Match {
+public class Game {
 
 	Field field;
 	Date date;
@@ -73,11 +73,11 @@ public class Match {
 	public static void main(String[] args) {
 
 		System.out.println("starting application");
-		// create match
-		Match match = new Match();
-		match.setField(new Field(100));
-		match.setDate(new Date());
-		match.setBall(new Ball());
+		// create game
+		Game game = new Game();
+		game.setField(new Field(100));
+		game.setDate(new Date());
+		game.setBall(new Ball());
 
 		// create players team A
 		ArrayList<Player> listA = new ArrayList<Player>();
@@ -121,14 +121,14 @@ public class Match {
 		teamB.setPlayers(listB);
 		teamB.setCoach(new Coach());
 
-		// add teams to match
+		// add teams to game
 		ArrayList<Team> teams = new ArrayList<Team>();
 		teams.add(teamA);
 		teams.add(teamB);
-		match.setTeams(teams);
+		game.setTeams(teams);
 
 		// start game
-		match.start();
+		game.start();
 	}
 
 	public void start() {
